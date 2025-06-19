@@ -1,44 +1,50 @@
-# 📈 Nifty 50 Macro Dashboard
+# 📈 Nifty 50 Volatility & Macroeconomic Indicators Dashboard
 
-An interactive Power BI dashboard analyzing the **volatility of Nifty 50** in relation to key **macroeconomic indicators** of India from **2010 to 2025**, with forecasting and visual insights.
+## 📘 Overview
+
+This project explores how key macroeconomic indicators influence the **volatility of the Nifty 50 index**—India's benchmark stock market index. Using data analytics, regression modeling, and visualization tools, we’ve created an **interactive Power BI dashboard** that captures trends, relationships, and patterns in the Indian economy between **2010 and 2025**.
 
 ---
 
-## 🧮 Macroeconomic Indicators Used
+## 🧩 Macroeconomic Indicators Used
 
-This project focuses on the intersection of capital markets and macroeconomic fundamentals. The following indicators were selected for their significant influence on stock market behavior:
+The following indicators were analyzed:
 
-- **GDP Growth (%)**
-- **Inflation (CPI)**
-- **Interest Rate (Repo Rate %)**
-- **IIP (Index of Industrial Production)**
+- **Nifty 50 Volatility** (monthly standard deviation)
+- **Consumer Price Index (CPI)** – proxy for Inflation
+- **RBI Repo Rate**
+- **Index of Industrial Production (IIP)**
 - **USD to INR Exchange Rate**
-- **Nifty 50 Volatility**
+- **Real GDP Growth Rate (%)**
 
 ---
 
-## 🌐 Data Sources
+## 🗂️ Data Sources
 
-The dataset was manually compiled and cleaned using **reliable, official macroeconomic databases**:
-
-- 📊 [World Bank Open Data](https://data.worldbank.org/)
-- 🏦 [RBI Database](https://dbie.rbi.org.in/)
-- 🇮🇳 [MOSPI (Ministry of Statistics and Programme Implementation)](https://mospi.gov.in/)
-- 📈 [Yahoo Finance](https://finance.yahoo.com/) (for historical Nifty 50 prices)
-- 🧾 [Trading Economics](https://tradingeconomics.com/)
-- 📁 Data combined and structured manually in Excel for preprocessing.
+| Indicator         | Source                                                 |
+|------------------|--------------------------------------------------------|
+| Nifty 50 Volatility | [NSE India](https://www.nseindia.com)                |
+| CPI               | [MOSPI](https://mospi.gov.in)                          |
+| RBI Repo Rate     | [RBI Database](https://dbie.rbi.org.in)               |
+| IIP               | [MOSPI](https://mospi.gov.in)                          |
+| USD to INR Rate   | [Yahoo Finance](https://finance.yahoo.com/quote/INR=X)|
+| GDP Growth        | [MOSPI](https://mospi.gov.in)                          |
 
 ---
 
-## 🐍 Data Preparation in Python
+## 🐍 Data Preparation (Python)
 
-Before visualizing in Power BI, the dataset underwent preprocessing using **Python**.
+The dataset was built using **Python (Pandas, NumPy, Seaborn, Matplotlib)**.
 
-Key libraries used:
+- Cleaned and merged 6+ datasets using `merge` and `outer join`.
+- Converted string percentages and date fields to numerical formats.
+- Created summary metrics and derived fields (e.g., YoY change).
+- Handled missing data using imputation and domain logic.
+- Performed linear regression to test how indicators affect Nifty volatility.
 
-```python
-import pandas as pd
-import numpy as np
+➡️ Exported final dataset as `nifty_macro_dataset.csv` and loaded into Power BI.
+
+---
 
 ## 📊 Power BI Dashboard
 
@@ -75,3 +81,54 @@ The Power BI dashboard is designed to be clean, intuitive, and analytically rich
 
 #### 📊 Pie Chart: GDP Performance Categories
 - Proportion of years with **high**, **moderate**, and **low** GDP growth rates.
+
+---
+
+## ⚙️ Technologies Used
+
+- **Python** (Pandas, NumPy, Seaborn, Matplotlib, yfinance)
+- **Power BI** (Desktop)
+- **GitHub** (Repository, Version Control)
+
+---
+
+## 🚀 How to Use
+
+1. Clone this repository or download the `nifty_macro_dashboard.pbix` file.
+2. Open it in Power BI Desktop.
+3. Use the **Year Slicer** to explore trends over time.
+4. Hover over visuals and charts to reveal deep insights.
+
+---
+
+## 📁 Repository Structure
+
+```
+nifty-volatility-dashboard/
+│
+├── data/
+│   ├── raw_data_files.xlsx
+│   ├── nifty_macro_dataset.csv
+│
+├── dashboard/
+│   ├── nifty_macro_dashboard.pbix
+│   └── dashboard.png
+│
+├── README.md
+```
+
+---
+
+## 🌟 Acknowledgments
+
+Special thanks to:
+- [RBI](https://rbi.org.in)
+- [MOSPI](https://mospi.gov.in)
+- [Yahoo Finance](https://finance.yahoo.com)
+- [NSE India](https://www.nseindia.com)
+
+---
+
+
+
+
