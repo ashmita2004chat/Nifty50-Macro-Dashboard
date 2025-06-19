@@ -104,20 +104,21 @@ The Power BI dashboard is designed to be clean, intuitive, and analytically rich
 ## 📁 Repository Structure
 
 ```
-nifty-volatility-dashboard/
+📁 Nifty50-Macro-Dashboard/
+├── 📁 data/                             # Folder containing raw macroeconomic data files (CSV/Excel)
+│   └── [GDP.csv, Inflation.xlsx, etc.] # Individual data files uploaded by you
 │
-├── data/
-│   ├── raw_data_files.xlsx
-│   ├── nifty_macro_dataset.csv
+├── NIFTY 50 Dashboard.pbix             # Final Power BI dashboard file
 │
-├── dashboard/
-│   ├── nifty_macro_dashboard.pbix
-│   └── dashboard.png
+├── dashboard.png                       # Screenshot preview of the dashboard
 │
-├── README.md
+├── macro_dashboard_analysis.ipynb      # Jupyter notebook used for data preparation and cleaning
+│
+├── README.md                           # Documentation explaining the entire project
+
 ```
 
----
+
 
 ## 🌟 Acknowledgments
 
